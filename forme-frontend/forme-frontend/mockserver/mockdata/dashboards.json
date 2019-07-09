@@ -1,0 +1,529 @@
+[
+    {
+        "name": "home",
+        "header": {
+            "titleFragment": "sap.me.shell.fragment.dashboard.HomeHeaderTitle"
+        },
+        "attributes": [],
+        "sections": [
+            {
+                "name": "home",
+                "title": "Intelligent Home",
+                "cards": [
+                    {
+                        "control": "sap/me/cards/_PreferredSuccessCard",
+                        "group": {
+                            "key": "mypreferredsuccess",
+                            "title": ""
+                        },
+                        "columns": 12,
+                        "settings": {
+                            "growing": true,
+                            "growingThreshold": 5
+                        }
+                    },
+                    {
+                        "control": "sap/me/cards/_OverviewCard",
+                        "group": {
+                            "key": "mysappreferredsuccess",
+                            "title": ""
+                        },
+                        "columns": 8,
+                        "settings": {
+                            "growing": true,
+                            "growingThreshold": 5
+                        }
+                    },
+                    {
+                        "control": "sap/me/cards/_UpcomingEventsCard",
+                        "group": {
+                            "key": "mysappreferredsuccess",
+                            "title": ""
+                        },
+                        "columns": 4,
+                        "settings": {
+                            "growing": true,
+                            "growingThreshold": 3
+                        }
+                    },
+                    {
+                        "control": "sap/me/cards/_ServicesDeliveredCard",
+                        "group": {
+                            "key": "myOverview",
+                            "title": ""
+                        },
+                        "columns": 3,
+                        "settings": {
+                            "growing": true,
+                            "growingThreshold": 3
+                        }
+                    },
+                    {
+                        "control": "sap/me/cards/_ServicesPortfolioCard",
+                        "group": {
+                            "key": "myOverview",
+                            "title": ""
+                        },
+                        "columns": 3,
+                        "settings": {
+                            "growing": true,
+                            "growingThreshold": 3
+                        }
+                    },
+                    {
+                        "control": "sap/me/cards/_RecordedEventsCard",
+                        "group": {
+                            "key": "myOverview",
+                            "title": ""
+                        },
+                        "columns": 3,
+                        "settings": {
+                            "growing": true,
+                            "growingThreshold": 3
+                        }
+                    },
+                    {
+                        "control": "sap/me/cards/_KeyResourcesCard",
+                        "group": {
+                            "key": "myOverview",
+                            "title": ""
+                        },
+                        "columns": 3,
+                        "settings": {
+                            "growing": true,
+                            "growingThreshold": 3
+                        }
+                    },
+                    {
+                        "control": "sap/me/cards/_EventsCard",
+                        "group": {
+                            "key": "myOverview",
+                            "title": ""
+                        },
+                        "columns": 6,
+                        "settings": {
+                            "growing": true,
+                            "growingThreshold": 3
+                        }
+                    },
+                    {
+                        "control": "sap/me/cards/_PreferredSuccessContactsCard",
+                        "group": {
+                            "key": "myOverview",
+                            "title": ""
+                        },
+                        "columns": 3,
+                        "settings": {
+                            "growing": true,
+                            "growingThreshold": 3
+                        }
+                    },
+                    {
+                        "control": "sap/me/cards/_ServicesDeliveredTableCard",
+                        "group": {
+                            "key": "myServices",
+                            "title": ""
+                        },
+                        "columns": 12,
+                        "settings": {
+                            "growing": true,
+                            "growingThreshold": 5
+                        }
+                    },
+                    {
+                        "control": "sap/me/cards/_ServicesPortfolioTableCard",
+                        "group": {
+                            "key": "myServices",
+                            "title": ""
+                        },
+                        "columns": 12,
+                        "settings": {
+                            "growing": true,
+                            "growingThreshold": 10
+                        }
+                    },
+
+                    {
+                        "control": "sap/me/cards/_RecordedEventsTableCard",
+                        "group": {
+                            "key": "myServices",
+                            "title": ""
+                        },
+                        "columns": 12,
+                        "settings": {
+                            "growing": true,
+                            "growingThreshold": 10
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "productDetail",
+        "header": {
+            "titleFragment": "sap.me.shell.fragment.dashboard.ProductDetailHeaderTitle",
+            "titleBinding": "odata>/Products('{productKey}')"
+        },
+        "attributes": [
+            "productKey"
+        ],
+        "sections": [
+            {
+                "name": "overview",
+                "title": "Overview",
+                "cards": [
+                    {
+                        "control": "sap/me/cards/LicensesOverviewCard",
+                        "columns": {
+                            "LargeDesktop": 4,
+                            "Desktop": 4,
+                            "Tablet": 6,
+                            "Phone": 12
+                        }
+                    },
+                    {
+                        "control": "sap/me/cards/OrdersOverviewCard",
+                        "columns": {
+                            "LargeDesktop": 4,
+                            "Desktop": 4,
+                            "Tablet": 6,
+                            "Phone": 12
+                        }
+                    },
+                    {
+                        "control": "sap/me/cards/TenantsOverviewCard",
+                        "columns": {
+                            "LargeDesktop": 4,
+                            "Desktop": 4,
+                            "Tablet": 6,
+                            "Phone": 12
+                        }
+                    },
+                    {
+                        "control": "sap/me/cards/CustomerIncidentsCard",
+                        "columns": 12,
+                        "settings": {
+                            "growing": true,
+                            "growingThreshold": 5
+                        }
+                    },
+                    {
+                        "control": "sap/me/cards/SAPContactsCard",
+                        "columns": 8,
+                        "settings": {
+                            "growing": true,
+                            "growingThreshold": 5
+                        }
+                    },
+                    {
+                        "control": "sap/me/cards/ProductCustomerContactsCard",
+                        "columns": 8,
+                        "settings": {
+                            "growing": true,
+                            "growingThreshold": 10
+                        }
+                    },
+                    {
+                        "control": "sap/me/cards/CustomerContractualContactsCard",
+                        "columns": 4
+                    },
+                    {
+                        "control": "sap/me/cards/LearningJourneyCard",
+                        "group": {
+                            "key": "learningjourneys",
+                            "title": "Available Learning Journeys"
+                        },
+                        "columns": {
+                            "LargeDesktop": 4,
+                            "Desktop": 4,
+                            "Tablet": 6,
+                            "Phone": 12
+                        },
+                        "settings": {
+                            "title": "SAP SuccessFactors Onboarding",
+                            "description": "SAP SuccessFactors Onboarding. Learn how to configure, implement, and administer theSAP SuccessFactors Onboarding 1.0 module.",
+                            "learningItems": 7,
+                            "role": "Consultant",
+                            "lastUpdated": "2019-01-17T00:00:00Z",
+                            "link": "product/test/tenants"
+                        }
+                    },
+                    {
+                        "control": "sap/me/cards/LearningJourneyCard",
+                        "group": {
+                            "key": "learningjourneys",
+                            "title": "Available Learning Journeys"
+                        },
+                        "columns": {
+                            "LargeDesktop": 4,
+                            "Desktop": 4,
+                            "Tablet": 6,
+                            "Phone": 12
+                        },
+                        "settings": {
+                            "title": "SAP SuccessFactors Recruiting Marketing",
+                            "description": "Learn how to configure, implement, and administer the SAP SuccessFactors Recruiting Marketing module.",
+                            "learningItems": 11,
+                            "role": "Administrator",
+                            "lastUpdated": "2019-04-17T00:00:00Z",
+                            "link": "home"
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "licenses",
+                "title": "Licenses",
+                "cards": [
+                    {
+                        "control": "sap/me/cards/LicensesCard",
+                        "columns": 12,
+                        "settings": {
+                            "growing": true,
+                            "growingThreshold": 5
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "systems",
+                "title": "Systems",
+                "cards": [
+                    {
+                        "control": "sap/me/cards/SystemsCard",
+                        "columns": 12,
+                        "settings": {
+                            "growing": true,
+                            "growingThreshold": 5
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "orders",
+                "title": "Orders",
+                "cards": [
+                    {
+                        "control": "sap/me/cards/OrdersCard",
+                        "columns": 12,
+                        "settings": {
+                            "growing": true,
+                            "growingThreshold": 5
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "additionalInformation",
+                "title": "Additional Information",
+                "cards": [
+                    {
+                        "control": "sap/me/cards/AdditionalInformationCard",
+                        "columns": {
+                            "LargeDesktop": 4,
+                            "Desktop": 4,
+                            "Tablet": 6,
+                            "Phone": 12
+                        },
+                        "settings": {
+                            "links": [
+                            {
+                                "text": "SAP Homepage",
+                                "href": "https://www.sap.com/",
+                                "emphasized": false
+                            }
+                        ],
+                        "linkCategoryKey": "General"
+                    }
+                    },
+                    {
+                        "control": "sap/me/cards/AdditionalInformationCard",
+                        "columns": {
+                            "LargeDesktop": 4,
+                            "Desktop": 4,
+                            "Tablet": 6,
+                            "Phone": 12
+                        },
+                        "settings": {
+                            "links": [
+                            {
+                                "text": "C4C Homepage",
+                                "href": "https://example.org/",
+                                "emphasized": false
+                            },
+                            {
+                                "text": "C4C Help",
+                                "href": "https://example.org/",
+                                "emphasized": false
+                            },
+                            {
+                                "text": "C4C Same One Product",
+                                "href": "https://example.org/",
+                                "emphasized": false
+                            },
+                            {
+                                "text": "C4C One Product",
+                                "href": "https://example.org/",
+                                "emphasized": false
+                            }
+                        ],
+                        "linkCategoryKey": "C4C"
+                    }
+                }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "userProfile",
+        "header": {
+            "titleFragment": "sap.me.shell.fragment.dashboard.UserProfileHeaderTitle",
+            "titleBinding": "odata>/User(0)"
+        },
+        "attributes": [],
+        "sections": [
+            {
+                "name": "overview",
+                "title": "Overview",
+                "cards": [
+                    {
+                        "control": "sap/me/cards/UserContactCard",
+                        "columns": {
+                            "LargeDesktop": 4,
+                            "Desktop": 4,
+                            "Tablet": 6,
+                            "Phone": 12
+                        }
+                    },
+                    {
+                        "control": "sap/me/cards/UserCompanyCard",
+                        "columns": {
+                            "LargeDesktop": 4,
+                            "Desktop": 4,
+                            "Tablet": 6,
+                            "Phone": 12
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "myLearnings",
+                "title": "Knowledge",
+                "cards": [
+                    {
+                        "control": "sap/me/cards/LearningsCard",
+                        "columns": {
+                            "LargeDesktop": 6,
+                            "Desktop": 8,
+                            "Tablet": 10,
+                            "Phone": 10
+                        },
+                        "settings" : {
+                            "growing" : true,
+                            "growingThreshold" : 5
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "mySAPContacts",
+                "title": "My Contacts",
+                "cards": [
+                    {
+                        "control": "sap/me/cards/SAPContactsCard",
+                        "columns": {
+                            "LargeDesktop": 8,
+                            "Desktop": 10,
+                            "Tablet": 12,
+                            "Phone": 12
+                        },
+                        "settings": {
+                            "growing": true,
+                            "growingThreshold": 5
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "fastAccess",
+        "header": {},
+        "attributes": [
+            "mode"
+        ],
+        "sections": [
+            {
+                "name": "fastAccess",
+                "title": "Fast Access",
+                "cards": [
+                    {
+                        "control": "sap/me/cards/FastAccessCard",
+                        "columns": {
+                            "LargeDesktop": 3,
+                            "Desktop": 4,
+                            "Tablet": 6,
+                            "Phone": 12
+                        },
+                        "settings": {
+                            "name": "SAPHP",
+                            "icon": "sap-icon://sys-help",
+                            "title": "SAP Help Portal",
+                            "description": "Explore SAP product documentation and Learning Journeys for all businesses/industries, find answers to your questions, and more!",
+                            "link": "https://help.sap.com"
+                        }
+                    },
+                    {
+                        "control": "sap/me/cards/FastAccessCard",
+                        "columns": {
+                            "LargeDesktop": 3,
+                            "Desktop": 4,
+                            "Tablet": 6,
+                            "Phone": 12
+                        },
+                        "settings": {
+                            "name": "OSAP",
+                            "icon": "sap-icon://study-leave",
+                            "title": "openSAP",
+                            "description": "Get free SAP training on the openSAP platform to learn about SAP innovations through gamification and connections with other learners and SAP experts.",
+                            "link": "https://open.sap.com/"
+                        }
+                    },
+                    {
+                        "control": "sap/me/cards/FastAccessCard",
+                        "columns": {
+                            "LargeDesktop": 3,
+                            "Desktop": 4,
+                            "Tablet": 6,
+                            "Phone": 12
+                        },
+                        "settings": {
+                            "name": "SAPS",
+                            "initials": "S",
+                            "title": "SAP Store",
+                            "description": "Discover, download & buy SAP solutions, services & free trials from SAP & partners including business analytics, Crystal Reports, mobile apps, cloud solutions...",
+                            "link": "https://www.sapstore.com/"
+                        }
+                    },
+                    {
+                        "control": "sap/me/cards/FastAccessCard",
+                        "columns": {
+                            "LargeDesktop": 3,
+                            "Desktop": 4,
+                            "Tablet": 6,
+                            "Phone": 12
+                        },
+                        "settings": {
+                            "name": "LUI",
+                            "icon": "sap-icon://wrench",
+                            "title": "License Utilization Information",
+                            "description": "The License Utilization Information Application provides a comprehensive overview of SAP license entitlements and SAP software usage for SAP Public Cloud and SAP S/4HANA On-Premise customers.",
+                            "link": "https://launchpad.support.sap.com/#/license/utilization"
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+]

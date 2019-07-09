@@ -1,0 +1,20 @@
+[
+    {
+      "ID": 1,
+      "description": "SAP Preferred Success Community",
+      "link": "https://preferredsuccess.sap.com/home",
+      "icon": "sap-icon://horizontal-bullet-chart"
+    },
+    {
+      "ID": 2,
+      "description": "SAP Preferred Success Customer References",
+      "link": "https://preferredsuccess.sap.com/home/oovtwctTdJcJA7BvE7xQdk",
+      "icon": "sap-icon://kpi-corporate-performance"
+    },
+    {
+      "ID": 3,
+      "description": "SAP Cloud Platform Discovery Center",
+      "link": "https://platformx-ad17b8dc3.dispatcher.hana.ondemand.com/protected/index.html#/missions/servicedmissions/ps",
+      "icon": "sap-icon://line-charts"
+    }
+  ]

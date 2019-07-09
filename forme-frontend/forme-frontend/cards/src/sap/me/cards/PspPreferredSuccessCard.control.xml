@@ -1,0 +1,23 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:f="sap.f" xmlns:layout="sap.ui.layout"
+    xmlns:form="sap.ui.layout.form" xmlns:me="sap.me.cards"
+    xmlns:chart="sap.suite.ui.microchart">
+    <me:Card description="{$this.i18n>exampleCardDescription}"
+            placeholderType="Generic" placeholderHeight="313px">
+        <me:headerContentLeft>
+            <Image src="/images/crown.png" width="1rem" class="sapUiSmallMargin sapUiNoMarginBegin" press="sortByProduct" />
+            <Link class="sapUiSmallMargin sapUiNoMarginBegin" text="{$this.i18n>preferredSuccess_appTitle}" />
+
+            <Text class="sapUiSmallMargin sapUiNoMarginBegin" text="Goals:" />
+            <Link class="sapUiSmallMargin sapUiNoMarginBegin" text="5" type="Navigation"/>
+
+            <Text class="sapUiSmallMargin sapUiNoMarginBegin" text="Services:" />
+            <Link class="sapUiSmallMargin sapUiNoMarginBegin" text="110" type="Navigation"/>
+
+            <Text class="sapUiSmallMargin sapUiNoMarginBegin" text="QBR:" />
+            <Link class="sapUiSmallMargin sapUiNoMarginBegin" text="11" type="Navigation"/>
+
+            <Text class="sapUiSmallMargin sapUiNoMarginBegin" text="Learnings:" />
+            <Link class="sapUiSmallMargin sapUiNoMarginBegin" text="26" type="Navigation"/>
+        </me:headerContentLeft>
+    </me:Card>
+</core:FragmentDefinition>

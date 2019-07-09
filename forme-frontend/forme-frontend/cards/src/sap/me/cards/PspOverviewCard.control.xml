@@ -1,0 +1,50 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:f="sap.f" xmlns:layout="sap.ui.layout"
+    xmlns:form="sap.ui.layout.form" xmlns:me="sap.me.cards">
+    <me:Card description="{$this.i18n>products_description}">
+        <me:headerContentLeft>
+            <Text text="{$this.i18n>overview_appTitle}"/>
+        </me:headerContentLeft>
+        <Table id="overviewTable" contextualWidth="Auto" noDataText="{$this.i18n>noData}" popinLayout="GridSmall" alternateRowColors="true" 
+            items="{path: '$this.odata>/Overview', sorter: {path: '$this.odata>ID'}}" updateFinished="onUpdateFinished" class="sapForMeTable" >
+            <columns>
+                <Column width="21rem" hAlign="Left">
+                    <HBox alignItems="Center">
+                        <Text text="{$this.i18n>columnTitle_assets}" class="sapForMeTableHeaderText" />
+                        <Image src="/images/sorting-ranking.svg" class="sorting-ranking" press="sortByProduct" />
+                    </HBox>
+                </Column>
+                <Column hAlign="Right" minScreenWidth="Tablet" demandPopin="true">
+                    <HBox alignItems="Center">
+                        <Text text="{$this.i18n>columnTitle_sapsuccessfactors}" class="sapForMeTableHeaderText" />
+                        <Image src="/images/sorting-ranking.svg" class="sorting-ranking" press="sortByLicenses" />
+                    </HBox>
+                </Column>
+                <Column hAlign="Right" minScreenWidth="Tablet" demandPopin="true">
+                    <HBox alignItems="Center">
+                        <Text text="{$this.i18n>columnTitle_sapsforhanacloud}" class="sapForMeTableHeaderText" />
+                        <Image src="/images/sorting-ranking.svg" class="sorting-ranking" press="sortByTenants" />
+                    </HBox>
+                </Column>
+                 <Column hAlign="Right" minScreenWidth="Tablet" demandPopin="true" visible="{$this.auth>/ordersVisible}">
+                    <HBox alignItems="Center">
+                        <Text text="{$this.i18n>columnTitle_total}" class="sapForMeTableHeaderText" />
+                        <Image src="/images/sorting-ranking.svg" class="sorting-ranking" press="sortByOrders" />
+                    </HBox>
+                </Column>
+            </columns>
+            <items>
+                <ColumnListItem>
+                    <cells width="21rem" hAlign="Left" class="sapForMeProducts">
+                        <Text text="{$this.odata>asset}"/>
+                        <Link text="{$this.odata>sapsuccessfactors}"/>
+                        <Link text="{$this.odata>sapsforhanacloud}"/>
+                        <Text text="{$this.odata>total}"/>
+                    </cells>
+                </ColumnListItem>
+            </items>
+        </Table>
+        <me:dependents>
+            <core:Fragment fragmentName="sap.me.cards.ColumnSorterActionSheet" type="XML" />
+        </me:dependents>
+    </me:Card>
+</core:FragmentDefinition>

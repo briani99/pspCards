@@ -1,0 +1,28 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:f="sap.f" xmlns:layout="sap.ui.layout" xmlns:u="sap.ui.unified"
+    xmlns:form="sap.ui.layout.form" xmlns:me="sap.me.cards"
+    xmlns:chart="sap.suite.ui.microchart">
+    <me:Card title="{$this.i18n>events_appTitle}" description="{$this.i18n>events_appTitle}"
+            placeholderType="Generic" placeholderHeight="313px">
+        <me:headerContentRight>
+            <Button text="{$this.i18n>btn_SeeAll}" type="Transparent"/>
+        </me:headerContentRight>
+        <HBox class="sapUiSmallMarginBegin">            
+            <u:Calendar showWeekNumbers="false" class="sapUiSizeCompact customCalendar"/>
+            <Table id="eventsTable" contextualWidth="Auto" noDataText="{$this.i18n>noData}" popinLayout="GridSmall" alternateRowColors="false" 
+                items="{path: '$this.odata>/UpcomingEvents'}" updateFinished="onUpdateFinished" class="sapForMeTable" >
+                <columns>
+                    <Column width="80%" minScreenWidth="Tablet" demandPopin="true"/>
+                    <Column width="20%"/>
+                </columns>
+                <items>
+                    <ColumnListItem type="Navigation" press="onSeeAllEvents">
+                        <cells hAlign="Left">
+                            <ObjectIdentifier title="{$this.odata>webinarTitle}" text="{$this.odata>customerName}"/>
+                            <ObjectNumber number="{$this.odata>date}"/>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+			</Table>            
+        </HBox>
+    </me:Card>
+</core:FragmentDefinition>

@@ -1,0 +1,56 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:f="sap.f" xmlns:layout="sap.ui.layout"
+    xmlns:form="sap.ui.layout.form" xmlns:me="sap.me.cards">
+    <me:Card description="{$this.i18n>servicesPortfolioTable_appTitle}">
+        <me:headerContentLeft>
+            <Text text="{$this.i18n>servicesPortfolioTable_appTitle}"/>
+        </me:headerContentLeft>
+        <Table id="servicesPortfolioTable" contextualWidth="Auto" noDataText="{$this.i18n>noData}" popinLayout="GridSmall" alternateRowColors="true" 
+            items="{path: '$this.odata>/ServicesPortfolio'}" updateFinished="onUpdateFinished" class="sapForMeTable" >
+            <columns>
+                <Column width="30%" hAlign="Left">
+                    <HBox alignItems="Center">
+                        <Text text="{$this.i18n>columnTitle_ServiceItem}" class="sapForMeTableHeaderText" />
+                    </HBox>
+                </Column>
+                <Column hAlign="Left" minScreenWidth="Tablet" demandPopin="true">
+                    <HBox alignItems="Center">
+                        <Text text="{$this.i18n>columnTitle_ServiceType}" class="sapForMeTableHeaderText" />
+                    </HBox>
+                </Column>
+                <Column hAlign="Left" minScreenWidth="Tablet" demandPopin="true">
+                    <HBox alignItems="Center">
+                        <Text text="{$this.i18n>columnTitle_BusinessGoal}" class="sapForMeTableHeaderText" />
+                    </HBox>
+                </Column>
+                 <Column hAlign="Left" minScreenWidth="Tablet" demandPopin="true">
+                    <HBox alignItems="Center">
+                        <Text text="{$this.i18n>columnTitle_Module}" class="sapForMeTableHeaderText" />
+                    </HBox>
+                </Column>
+                <Column hAlign="Left" minScreenWidth="Tablet" demandPopin="true">
+                    <HBox alignItems="Center">
+                        <Text text="{$this.i18n>columnTitle_ValueDrivers}" class="sapForMeTableHeaderText" />
+                    </HBox>
+                </Column>
+                <Column width="10%" hAlign="Right" minScreenWidth="Tablet" demandPopin="true">
+                    
+                </Column>              
+            </columns>
+            <items>
+                <ColumnListItem>
+                    <cells width="21rem" hAlign="Left" class="sapForMeProducts">
+                        <Text text="{$this.odata>serviceItem}"/>
+                        <Text text="{$this.odata>serviceType}"/>
+                        <Text text="{$this.odata>businessGoal}"/>
+                        <Text text="{$this.odata>module}"/>
+                        <Text text="{$this.odata>valueDriver}"/>
+                        <Link text="{$this.i18n>columnTitle_Download}"/>
+                    </cells>
+                </ColumnListItem>
+            </items>
+        </Table>
+        <me:dependents>
+            <core:Fragment fragmentName="sap.me.cards.ColumnSorterActionSheet" type="XML" />
+        </me:dependents>
+    </me:Card>
+</core:FragmentDefinition>

@@ -1,0 +1,37 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:f="sap.f" xmlns:layout="sap.ui.layout"
+    xmlns:form="sap.ui.layout.form" xmlns:me="sap.me.cards">
+    <me:Card description="{$this.i18n>products_description}">
+        <me:headerContentLeft>
+            <Text text="{$this.i18n>upcomingEvents_appTitle}"/>
+        </me:headerContentLeft>
+        <Table id="upcomingEventsTable" contextualWidth="Auto" noDataText="{$this.i18n>noData}" popinLayout="GridSmall" alternateRowColors="false" 
+            items="{path: '$this.odata>/UpcomingEvents'}" updateFinished="onUpdateFinished" class="sapForMeTable" >
+            <columns>
+                <Column hAlign="Center" width="10%">
+                </Column>
+                <Column width="70%">
+                </Column>
+                <Column hAligh="Right">
+                </Column>
+            </columns>
+            <items>
+                <ColumnListItem>
+                    <cells>
+                        <VBox>
+                            <Text text="{path: '$this.odata>date', formatter: '._formatDay'}"/>
+                            <Text text="{path: '$this.odata>date', formatter: '._formatMonth'}"/>
+                        </VBox>
+                        <VBox>
+                            <Text text="{$this.odata>webinarTitle}"/>
+                            <Text text="{$this.odata>webinarSubtitle}"/>
+                        </VBox>
+                        <Text text="{$this.odata>betweenHours}"/>
+                    </cells>
+                </ColumnListItem>
+            </items>
+        </Table>
+        <me:dependents>
+            <core:Fragment fragmentName="sap.me.cards.ColumnSorterActionSheet" type="XML" />
+        </me:dependents>
+    </me:Card>
+</core:FragmentDefinition>

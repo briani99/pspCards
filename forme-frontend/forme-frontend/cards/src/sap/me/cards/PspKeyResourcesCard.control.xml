@@ -1,0 +1,28 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:f="sap.f" xmlns:layout="sap.ui.layout"
+    xmlns:form="sap.ui.layout.form" xmlns:me="sap.me.cards">
+    <me:Card description="{$this.i18n>products_description}">
+        <me:headerContentLeft>
+            <Text text="{$this.i18n>keyResources_appTitle}"/>
+        </me:headerContentLeft>
+        <Table id="overviewTable" contextualWidth="Auto" noDataText="{$this.i18n>noData}" popinLayout="GridSmall" alternateRowColors="true" 
+            items="{path: '$this.odata>/HotTopics'}" updateFinished="onUpdateFinished" class="sapForMeTable" >
+            <columns>
+                <Column width="15%" hAlign="Left">
+                </Column>
+                <Column hAlign="Left" minScreenWidth="Tablet">
+                </Column>
+            </columns>
+            <items>
+                <ColumnListItem>
+                    <cells hAlign="Left" class="sapForMeProducts">
+                        <core:Icon src="{$this.odata>icon}"/>
+                        <Link text="{$this.odata>description}"/>                        
+                    </cells>
+                </ColumnListItem>
+            </items>
+        </Table>
+        <me:dependents>
+            <core:Fragment fragmentName="sap.me.cards.ColumnSorterActionSheet" type="XML" />
+        </me:dependents>
+    </me:Card>
+</core:FragmentDefinition>

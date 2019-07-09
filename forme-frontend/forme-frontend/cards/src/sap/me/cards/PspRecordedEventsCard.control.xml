@@ -1,0 +1,36 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:f="sap.f" xmlns:layout="sap.ui.layout"
+    xmlns:form="sap.ui.layout.form" xmlns:me="sap.me.cards" xmlns:html="http://www.w3.org/1999/xhtml">
+    <me:Card description="{$this.i18n>products_description}">
+        <me:headerContentLeft>
+            <Text text="{$this.i18n>recordedEvents_appTitle}"/>
+        </me:headerContentLeft>
+        <Table id="recordedEventsTable" contextualWidth="Auto" noDataText="{$this.i18n>noData}" popinLayout="GridSmall" alternateRowColors="false" 
+            items="{path: '$this.odata>/Recordings'}" updateFinished="onUpdateFinished" class="sapForMeTable" >
+            <columns>
+                <Column width="15%" hAlign="Left">
+                </Column>
+                <Column hAlign="Left" minScreenWidth="Tablet">
+                </Column>
+            </columns>
+            <items>
+                <ColumnListItem>
+                    <cells width="21rem" hAlign="Left" class="sapForMeProducts">
+
+                        <core:Icon size="1rem"
+							src="{path: '$this.odata>moduleId', formatter: '._formatIcon'}"
+                            color="white"
+                            backgroundColor="{path: '$this.odata>moduleId', formatter: '._formatIconColor'}"
+                            class="recordingsIconPadding"/>
+                        <VBox>
+                            <Text text="{$this.odata>module}"/>
+                            <Text text="{$this.odata>serviceItem}"/>
+                        </VBox>
+                    </cells>
+                </ColumnListItem>
+            </items>
+        </Table>
+        <me:dependents>
+            <core:Fragment fragmentName="sap.me.cards.ColumnSorterActionSheet" type="XML" />
+        </me:dependents>
+    </me:Card>
+</core:FragmentDefinition>

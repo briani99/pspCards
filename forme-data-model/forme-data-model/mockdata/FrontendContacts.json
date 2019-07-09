@@ -1,0 +1,38 @@
+[
+    {
+      "ID": 1,
+      "customerID": "202894",
+      "customerName": "Intelligence Enterprise SE",
+      "contactID": "D046468",
+      "lastName": "Chevalier",
+      "firstName": "Alain",
+      "email": "alain.chevalier@sap.com",
+      "phone": "+49502425658",
+      "role": "Customer Success Manager Principal",
+      "imagePath": "../images/avatar_alain_chevalier.png"
+    },
+    {
+      "ID": 3,
+      "customerID": "5674186",
+      "customerName": "Tapestry Inc",
+      "contactID": "D046468",
+      "lastName": "Legrand",
+      "firstName": "Monique",
+      "email": "monique.legrand@sap.com",
+      "phone": "+49502425658",
+      "role": "Customer Success Manager",
+      "imagePath": "../images/avatar_monique_legrand.png"
+    },
+    {
+      "ID": 2,
+      "customerID": "202894",
+      "customerName": "Intelligence Enterprise SE",
+      "contactID": "I073001",
+      "lastName": "Adams",
+      "firstName": "Michael",
+      "email": "michael.adams@sap.com",
+      "phone": "+4925632568545",
+      "role": "Customer Success Manager",
+      "imagePath": "../images/avatar_michael_adams.png"
+    }    
+  ]

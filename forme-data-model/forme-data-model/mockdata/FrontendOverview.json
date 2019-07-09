@@ -1,0 +1,30 @@
+[
+    {
+        "ID": 1,
+        "asset": "KPI & Goal Management",
+        "sapsuccessfactors": 3,
+        "sapsforhanacloud": 7,
+        "total": 10
+    },
+    {
+        "ID": 2,
+        "asset": "Delivered Services",
+        "sapsuccessfactors": 5,
+        "sapsforhanacloud": 10,
+        "total": 15
+    },
+    {
+        "ID": 3,
+        "asset": "Service Portfolio",
+        "sapsuccessfactors": 110,
+        "sapsforhanacloud": 110,
+        "total": 220
+    },
+    {
+        "ID": 4,
+        "asset": "Learning Material",
+        "sapsuccessfactors": 25,
+        "sapsforhanacloud": 13,
+        "total": 38
+    }
+]
