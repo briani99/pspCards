@@ -1,0 +1,53 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:viz="sap.viz.ui5.controls" xmlns:f="sap.f" xmlns:layout="sap.ui.layout" xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds"
+    xmlns:viz.data="sap.viz.ui5.data"
+    xmlns:form="sap.ui.layout.form" xmlns:me="sap.me.cards">
+    <me:Card title="{$this.i18n>maleToFemaleTitle}"
+            placeholderType="Generic" placeholderHeight="313px">
+        <VBox>
+            <Text class="sapUiSmallMarginBegin sapUiSmallMarginBottom" text="{$this.i18n>globalLabel}" />
+            <HBox >
+            	<ObjectStatus
+					class="sapUiSmallMarginBegin sapUiLargeMarginEnd setTextSize"
+					text="27.62%"
+					icon="sap-icon://trend-down"
+					state="Error" />
+                <VBox class="sapUiMediumMarginBeginEnd">
+                    <Text text="{$this.i18n>targetLabel}"/>
+                    <Text text="50%" />
+                </VBox>
+                  <VBox class="sapUiSmallMarginBeginEnd">
+                    <Text  text="{$this.i18n>deviationLabel}" />
+                    <Text  text="-2%" />
+                </VBox>
+      
+            </HBox>
+            <Text class="sapUiSmallMarginBegin" text="{$this.i18n>femaleLabel}" />
+            	<layout:FixFlex id="employeesChart" class="hideToolbarChart" minFlexSize="250">
+			<layout:flexContent>
+               <viz:VizFrame id="idVizFrame" uiConfig="{applicationSet:'fiori'}"
+                height='100%' width="100%" vizType='donut'>
+                <viz:dataset>
+                    <viz.data:FlattenedDataset data="{path: '$this.odata>/Ratio'}" >
+                        <viz.data:dimensions>
+                            <viz.data:DimensionDefinition name="Employees"
+                                value="{$this.odata>employeesType}" />
+                        </viz.data:dimensions>
+                        <viz.data:measures>
+                            <viz.data:MeasureDefinition name="Total Employees"
+                                value="{$this.odata>employeesTotalNumber}"  />
+                        </viz.data:measures>
+                    </viz.data:FlattenedDataset>
+                </viz:dataset>
+
+                <viz:feeds>
+                    <viz.feeds:FeedItem uid="size" type="Measure"
+                        values="Total Employees" />
+                    <viz.feeds:FeedItem uid="color" type="Dimension"
+                        values="Employees" />
+                </viz:feeds>
+            </viz:VizFrame>
+            		</layout:flexContent>
+		</layout:FixFlex>
+        </VBox>
+    </me:Card>
+</core:FragmentDefinition>
