@@ -11,6 +11,8 @@ service FrontendService {
   entity Contacts @readonly as projection on Frontend.Contacts;
   entity ServicesDelivered @readonly as projection on Frontend.ServicesDelivered;
   entity ServicesPortfolio @readonly as projection on Frontend.ServicesPortfolio;
+  entity NewLearningsOnboarding @readonly as projection on Frontend.NewLearningsOnboarding;
+  entity NewLearningsRecruitingMarketing @readonly as projection on Frontend.NewLearningsRecruitingMarketing;
 }
 
 entity PreferredSuccess {
@@ -110,4 +112,18 @@ entity ServicesPortfolio {
     solution: String;
     moduleID: String;
     module: String;
+}
+
+entity NewLearningsOnboarding {
+    key ID : Integer;
+    sfOnboarding : String;
+    learningItems : Integer;
+    lastUpdated : DateTime;
+}
+
+entity NewLearningsRecruitingMarketing {
+    key ID : Integer;
+    sfRecruitingMarketing : String;
+    learningItems : Integer;
+    lastUpdated : DateTime;
 }
