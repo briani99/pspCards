@@ -154,6 +154,29 @@
                             "growing": true,
                             "growingThreshold": 10
                         }
+                    }, {
+                        "control": "sap/me/cards/PspNewLearningsSuccessFactorsOnboardingCard",
+                        "group": {
+                            "key": "newLearnings",
+                            "title": "New Learnings"
+                        },
+                        "columns": {
+                            "LargeDesktop": 4,
+                            "Desktop": 4,
+                            "Tablet": 6,
+                            "Phone": 12
+                        }
+                    },{
+                        "control": "sap/me/cards/PspNewLearningsSuccessFactorsRecruitingMarketingCard",
+                        "group": {
+                            "key": "newLearnings"
+                        },
+                        "columns": {
+                            "LargeDesktop": 4,
+                            "Desktop": 4,
+                            "Tablet": 6,
+                            "Phone": 12
+                        }
                     }
                 ]
             }
