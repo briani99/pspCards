@@ -1,0 +1,32 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:viz="sap.viz.ui5.controls" xmlns:f="sap.f" xmlns:layout="sap.ui.layout" xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds"
+    xmlns:viz.data="sap.viz.ui5.data"
+    xmlns:form="sap.ui.layout.form" xmlns:me="sap.me.cards">
+    <me:Card title="{$this.i18n>adoptionPlanTitle}"
+            placeholderType="Generic" placeholderHeight="313px"> 
+        <VBox>
+            <ObjectStatus
+					class="sapUiLargeMarginBegin setTextSize alignCenterText"
+					text="29%"
+					state="Success" />
+            <Text class="sapUiLargeMarginBegin sapUiMediumMarginBottom alignCenterText" text="{$this.i18n>executedLabel}" />
+            <List items="{path: '$this.odata>/AdoptionPlan'}" >
+                <CustomListItem>
+                    <VBox>
+                         <HBox>
+                            <Text class="sapUiSmallMarginBegin sapUiLargeMarginEnd" width="8rem" text="{$this.odata>adoptionPlan}" />
+                            <Text class="sapUiLargeMarginBegin" text="{$this.odata>adoptionPlanFeatures}" />
+                        </HBox>
+                        <ProgressIndicator
+                            class="sapUiSmallMarginBeginEnd"
+                            percentValue="{$this.odata>adoptionPlanValue}"
+                            displayValue="{$this.odata>adoptionPlanUtilized}"
+                            height="0.8rem"
+                            width="90%"
+                            showValue="true"
+                            state="Success" />
+                    </VBox>
+                </CustomListItem>
+            </List>
+         </VBox>
+    </me:Card>
+</core:FragmentDefinition>

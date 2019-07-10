@@ -1,0 +1,22 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:f="sap.f" xmlns:layout="sap.ui.layout"
+    xmlns:form="sap.ui.layout.form" xmlns:me="sap.me.cards"
+    xmlns:chart="sap.suite.ui.microchart">
+    <me:Card title="{$this.i18n>usageDataFeatureAATitle}"
+            placeholderType="Generic" placeholderHeight="313px">
+    <VBox>
+        <Text class="sapUiSmallMargin" text="{$this.i18n>usageDataFeatureAAdescription}" />
+        <HBox>
+                <VBox>
+                    <chart:RadialMicroChart size="L" percentage="0" class="sapUiSmallMargin" width="10rem" />
+                     <Text class="sapUiMediumMarginBegin " text="{$this.i18n>utilizedLabel}" />
+                    <Text class="sapUiMediumMarginBegin sapUiMediumMarginBottom" text="{$this.i18n>sampleUsage1}"/>
+                </VBox>
+                <VBox>
+                    <chart:RadialMicroChart size="L" percentage="0" class="sapUiSmallMargin" width="10rem" />
+                    <Text class="sapUiSmallMarginBegin" text="{$this.i18n>consumedLabel}"/>
+                    <Text class="sapUiSmallMarginBegin sapUiMediumMarginBottom" text="{$this.i18n>sampleUsage2}" />
+                </VBox>
+        </HBox>
+   </VBox>
+    </me:Card>
+</core:FragmentDefinition>

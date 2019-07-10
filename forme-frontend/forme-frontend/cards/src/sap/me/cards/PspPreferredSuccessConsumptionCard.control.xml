@@ -1,0 +1,25 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:viz="sap.viz.ui5.controls" xmlns:f="sap.f" xmlns:layout="sap.ui.layout" xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds"
+    xmlns:viz.data="sap.viz.ui5.data"
+    xmlns:form="sap.ui.layout.form" xmlns:me="sap.me.cards">
+    <me:Card title="{$this.i18n>sapPreferredSuccessConsumptionTitle}"
+            placeholderType="Generic" placeholderHeight="313px">
+            <List items="{path: '$this.odata>/PreferredSuccessChecks'}" >
+                <CustomListItem>
+                    <VBox>
+                         <HBox>
+                            <Text class="sapUiSmallMarginBegin sapUiLargeMarginEnd" width="8rem" text="{$this.odata>successCheck}" />
+                            <Text class="sapUiLargeMarginBegin" text="{$this.odata>successCheckItems}" />
+                        </HBox>
+                        <ProgressIndicator
+                            class="sapUiSmallMarginBeginEnd"
+                            percentValue="{$this.odata>successCheckPercentage}"
+                            displayValue="{$this.odata>successCheckUtilized}"
+                            height="0.8rem"
+                            width="90%"
+                            showValue="true"
+                            state="Success" />
+                    </VBox>
+                </CustomListItem>
+            </List>
+    </me:Card>
+</core:FragmentDefinition>

@@ -1,0 +1,31 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:viz="sap.viz.ui5.controls" xmlns:f="sap.f" xmlns:layout="sap.ui.layout" xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds"
+    xmlns:viz.data="sap.viz.ui5.data"
+    xmlns:form="sap.ui.layout.form" xmlns:me="sap.me.cards">
+    <me:Card title="{$this.i18n>customerPerceivedOutcomeTitle}"
+            placeholderType="Generic" placeholderHeight="313px">
+            <VBox>
+            <Text text="{$this.i18n>customerPerceivedOutcomeDescription}"   class="sapUiSmallMarginBegin"/>
+       <Table class="sapForMeTable" id="perceivedOutcomeTable" updateFinished="onUpdateFinished" items="{path: '$this.odata>/CustomerPerceivedOutcome'}" alternateRowColors="false" popinLayout="GridSmall" noDataText="{$this.i18n>noData}" contextualWidth="Auto">
+            <columns>
+                <Column width="10%" hAlign="Center"> </Column>
+                <Column width="70%"> </Column>
+                <Column hAligh="Right"> </Column>
+            </columns>
+            <items>
+                <ColumnListItem>
+                    <cells>
+                        <ObjectStatus
+                            icon="{$this.odata>icon}"
+                            state="None" />
+                        <VBox>
+                            <Text text="{$this.odata>survey}"/>
+                            <Text text="{$this.odata>surveyType}"/>
+                        </VBox>
+                        <ObjectStatus text="{$this.odata>score}" state="{$this.odata>statusScore}"/>
+                    </cells>
+                </ColumnListItem>
+            </items>
+        </Table>
+        </VBox>
+    </me:Card>
+</core:FragmentDefinition>
