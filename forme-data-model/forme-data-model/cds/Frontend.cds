@@ -13,6 +13,9 @@ service FrontendService {
   entity ServicesPortfolio @readonly as projection on Frontend.ServicesPortfolio;
   entity NewLearningsOnboarding @readonly as projection on Frontend.NewLearningsOnboarding;
   entity NewLearningsRecruitingMarketing @readonly as projection on Frontend.NewLearningsRecruitingMarketing;
+  entity RegisteredEvents @readonly as projection on Frontend.RegisteredEvents;
+  entity SuccessFactorsOnboarding @readonly as projection on Frontend.SuccessFactorsOnboarding;
+  entity SuccessFactorsRecruitingMarketing @readonly as projection on Frontend.SuccessFactorsRecruitingMarketing;
 }
 
 entity PreferredSuccess {
@@ -125,5 +128,27 @@ entity NewLearningsRecruitingMarketing {
     key ID : Integer;
     sfRecruitingMarketing : String;
     learningItems : Integer;
+    lastUpdated : DateTime;
+}
+
+entity RegisteredEvents {
+    key ID : Integer;
+    registeredDate : DateTime;
+    eventName : String;
+    eventDescription : String;
+    "eventHours": String;
+}
+
+entity SuccessFactorsOnboarding{
+    key ID : Integer;
+    sfOnboarding : String;
+    learningType : String;
+    date : DateTime;
+}
+
+entity SuccessFactorsRecruitingMarketing {
+    key ID : Integer;
+    sfRecruitingMarketing : String;
+    learningType : String;
     lastUpdated : DateTime;
 }
