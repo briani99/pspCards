@@ -177,6 +177,42 @@
                             "Tablet": 6,
                             "Phone": 12
                         }
+                    },{
+                        "control": "sap/me/cards/PspRegisteredEventsCard",
+                        "group": {
+                            "key": "upcomingSessions",
+                            "title": "Upcoming Sessions"
+                        },
+                        "columns": {
+                            "LargeDesktop": 4,
+                            "Desktop": 4,
+                            "Tablet": 6,
+                            "Phone": 12
+                        }
+                    },{
+                        "control": "sap/me/cards/PspSuccessFactorsOnboardingCard",
+                        "group": {
+                            "key": "upcomingSessions",
+                            "title": "Upcoming Sessions"
+                        },
+                        "columns": {
+                            "LargeDesktop": 4,
+                            "Desktop": 4,
+                            "Tablet": 6,
+                            "Phone": 12
+                        }
+                    },{
+                        "control": "sap/me/cards/PspSuccessFactorsRecruitingMarketingCard",
+                        "group": {
+                            "key": "upcomingSessions",
+                            "title": "Upcoming Sessions"
+                        },
+                        "columns": {
+                            "LargeDesktop": 4,
+                            "Desktop": 4,
+                            "Tablet": 6,
+                            "Phone": 12
+                        }
                     }
                 ]
             }
