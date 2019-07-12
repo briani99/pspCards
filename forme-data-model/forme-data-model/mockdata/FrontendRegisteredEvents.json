@@ -1,0 +1,23 @@
+[
+    {
+        "ID": 0,
+        "registeredDate": "2019-04-01T14:00:40.000Z",
+        "eventName": "Tenant Customer Name (or ID)",
+        "eventDescription": "Tenant SID",
+        "eventHours": "3pm - 5pm"
+    },
+    {
+        "ID": 1,
+        "registeredDate": "2019-07-01T14:00:40.000Z",
+        "eventName": "USTranscom",
+        "eventDescription": "J2W",
+        "eventHours": "3pm - 5pm"
+    },
+    {
+        "ID": 2,
+        "registeredDate": "2019-12-29T14:00:40.000Z",
+        "eventName": "Defense Logistics Agency",
+        "eventDescription": "J2W",
+        "eventHours": "3pm - 5pm"
+    }
+]
