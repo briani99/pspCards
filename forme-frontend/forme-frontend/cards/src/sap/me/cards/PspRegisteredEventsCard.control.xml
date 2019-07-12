@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:f="sap.f" xmlns:form="sap.ui.layout.form" xmlns:layout="sap.ui.layout" xmlns:me="sap.me.cards" xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1">
+<me:Card title="{$this.i18n>yourRegisteredEventsTitle}">
+   <Table id="yourRegisteredEventsTable" contextualWidth="Auto" popinLayout="GridSmall" type="Navigation" growing="true" growingThreshold="20" updateFinished="onUpdateFinished" class="sapForMeTable" items="{$this.odata>/RegisteredEvents}">
+      <columns>
+         <Column hAlign="Left" width="15%">
+             <Text text="" class="sapForMeTableHeaderText" />
+         </Column>
+         <Column hAlign="Left"  width="55%" demandPopin="true">
+               <Text text="" class="sapForMeTableHeaderText" />
+         </Column>
+          <Column hAlign="Left"  demandPopin="true">
+             <Text text="" class="sapForMeTableHeaderText" />
+         </Column>
+      </columns>
+      <items>
+         <ColumnListItem>
+            <cells>
+               <Text text="{path: '$this.odata>registeredDate' , formatter: '.formatDate'}" />
+                <VBox>
+                  <Text text="{$this.odata>eventName}" class="sapForMeTableHeaderText" />
+                  <Label text="{$this.odata>eventDescription}" />
+               </VBox>
+               <Text text="{$this.odata>eventHours}" />
+            </cells>
+         </ColumnListItem>
+      </items>
+   </Table>
+   <me:dependents>
+      <core:Fragment fragmentName="sap.me.cards.CardSorterDialog" type="XML" />
+   </me:dependents>
+</me:Card>
+</core:FragmentDefinition>   

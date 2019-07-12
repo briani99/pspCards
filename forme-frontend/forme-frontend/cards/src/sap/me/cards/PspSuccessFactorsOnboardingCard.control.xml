@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:f="sap.f" xmlns:form="sap.ui.layout.form" xmlns:layout="sap.ui.layout" xmlns:me="sap.me.cards" xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1">
+<me:Card title="{$this.i18n>successFactorsOnboardingTitle}">
+      <VBox class="sapUiSmallMarginBegin">
+            <Text text="{$this.odata>/SuccessFactorsOnboarding(0)/sfOnboarding}" class="sapUiSmallMarginTop sapUiLargeMarginBottom" width="25rem"/>
+            <HBox class="sapUiSmallMarginBottom">
+                  <VBox class="sapUiLargeMarginEnd"> 
+                        <Label text="{$this.i18n>learningTypeLabel}" class="sapForMeTableHeaderText" />
+                        <Text text="{$this.odata>/SuccessFactorsOnboarding(0)/learningType}" class="sapForMeTableHeaderText"/>
+                  </VBox>
+                  <VBox class="sapUiSmallMarginBegin sapUiLargeMarginEnd"> 
+                        <Label text="{$this.i18n>dateLabel}" class="sapForMeTableHeaderText" />
+                        <Text text="{path: '$this.odata>/SuccessFactorsOnboarding(0)/date', formatter: '.formatDate'}"/>
+                  </VBox>
+                  <Button  class="sapUiLargeMarginBegin" text="{$this.i18n>registerButton}"/>
+             </HBox >
+      </VBox>
+</me:Card>
+</core:FragmentDefinition>   

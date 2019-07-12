@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:f="sap.f" xmlns:form="sap.ui.layout.form" xmlns:layout="sap.ui.layout" xmlns:me="sap.me.cards" xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1">
+<me:Card title="{$this.i18n>successFactorsRecruitingMarketingTitle}">
+<VBox class="sapUiSmallMarginBegin">
+    <Text text="{$this.odata>/SuccessFactorsRecruitingMarketing(0)/sfRecruitingMarketing}" class="sapUiSmallMarginTop sapUiLargeMarginBottom" width="25rem"/>
+   <HBox class="sapUiSmallMarginBottom">
+        <VBox class="sapUiLargeMarginEnd"> 
+               <Label text="{$this.i18n>learningTypeLabel}" class="sapForMeTableHeaderText" />
+               <Text text="{$this.odata>/SuccessFactorsRecruitingMarketing(0)/learningType}" class="sapForMeTableHeaderText"/>
+        </VBox>
+         <VBox class="sapUiSmallMarginBegin sapUiLargeMarginEnd"> 
+               <Label text="{$this.i18n>lastUpdatedLabel}"  class="sapForMeTableHeaderText" />
+               <Text text="{path: '$this.odata>/SuccessFactorsRecruitingMarketing(0)/lastUpdated', formatter: '.formatLastUpdated'}"/>
+        </VBox>
+        <Button  class="sapUiLargeMarginBegin" text="{$this.i18n>registerButton}"/>
+      </HBox >
+   </VBox>
+</me:Card>
+</core:FragmentDefinition>   
