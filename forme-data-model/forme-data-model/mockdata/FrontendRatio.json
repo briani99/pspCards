@@ -1,0 +1,15 @@
+[
+    {  "ID": "0",
+      "employeesType": "Male Employees",
+      "employeesTotalNumber": 72
+    }, 
+   { "ID": "1",
+     "employeesType":"Female Employees" ,
+     "employeesTotalNumber": 28
+    },
+    {  "ID": "2",
+        "employeesType": "Other",
+        "employeesTotalNumber": 11
+      }
+            
+  ]
