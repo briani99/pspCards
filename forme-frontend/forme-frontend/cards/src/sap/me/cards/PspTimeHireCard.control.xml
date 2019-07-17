@@ -1,0 +1,53 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:viz="sap.viz.ui5.controls" xmlns:f="sap.f" xmlns:layout="sap.ui.layout" xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds"
+    xmlns:viz.data="sap.viz.ui5.data"
+    xmlns:form="sap.ui.layout.form" xmlns:me="sap.me.cards">
+    <me:Card title="{$this.i18n>timeToHireTitle}"
+            placeholderType="Generic" placeholderHeight="313px">
+        <VBox>
+            <Text class="sapUiSmallMarginBegin sapUiSmallMarginBottom" text="{$this.i18n>globalLabel}" />
+            <HBox >
+            	<ObjectStatus
+					class="sapUiSmallMarginBegin sapUiLargeMarginEnd setTextSize"
+					text="24.17%"
+					icon="sap-icon://trend-up"
+					state="Success" />
+                <VBox class="sapUiMediumMarginBeginEnd">
+                    <Text text="{$this.i18n>targetLabel}"/>
+                    <Text text="14" />
+                </VBox>
+                  <VBox class="sapUiSmallMarginBeginEnd">
+                    <Text  text="{$this.i18n>deviationLabel}" />
+                    <Text  text="-1.6%" />
+                </VBox>
+      
+            </HBox>
+            <Text class="sapUiSmallMarginBegin" text="{$this.i18n>averageDaysLabel}" />
+            	<layout:FixFlex id="employeesChart" minFlexSize="250" >
+			<layout:flexContent>
+               <viz:VizFrame id="idVizFrame" uiConfig="{applicationSet:'fiori'}"  
+                height='100%' width="100%" vizType='line'>
+                <viz:dataset>
+                    <viz.data:FlattenedDataset data="{path: '$this.odata>/TimeHire'}" >
+                        <viz.data:dimensions>
+                            <viz.data:DimensionDefinition name="E"
+                                value="{$this.odata>date}" />
+                        </viz.data:dimensions>
+                        <viz.data:measures>
+                            <viz.data:MeasureDefinition name="# of Days"
+                                value="{$this.odata>employeesTotalNumber}"  />
+                        </viz.data:measures>
+                    </viz.data:FlattenedDataset>
+                </viz:dataset>
+
+                <viz:feeds>
+                    <viz.feeds:FeedItem uid="valueAxis" type="Measure"
+                        values="# of Days" />
+                    <viz.feeds:FeedItem uid="categoryAxis" type="Dimension"
+                        values="E" />
+                </viz:feeds>
+            </viz:VizFrame>
+            		</layout:flexContent>
+		</layout:FixFlex>
+        </VBox>
+    </me:Card>
+</core:FragmentDefinition>
