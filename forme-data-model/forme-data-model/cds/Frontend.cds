@@ -16,6 +16,7 @@ service FrontendService {
   entity RegisteredEvents @readonly as projection on Frontend.RegisteredEvents;
   entity SuccessFactorsOnboarding @readonly as projection on Frontend.SuccessFactorsOnboarding;
   entity SuccessFactorsRecruitingMarketing @readonly as projection on Frontend.SuccessFactorsRecruitingMarketing;
+  entity Ratio @readonly as projection on Frontend.Ratio;
   entity TimeHire @readonly as projection on Frontend.TimeHire;
 }
 
@@ -152,6 +153,12 @@ entity SuccessFactorsRecruitingMarketing {
     sfRecruitingMarketing : String;
     learningType : String;
     lastUpdated : DateTime;
+}
+
+entity Ratio {
+    key ID : String;
+    employeesType : String;
+    employeesTotalNumber : Integer;
 }
 
 entity TimeHire {
