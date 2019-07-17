@@ -1,0 +1,19 @@
+[
+    {  "ID": "0",
+      "date": "JUL 1",
+      "employeesTotalNumber": 18
+    },{ "ID": "3",
+      "date":"8",
+      "employeesTotalNumber": 17
+     },{ "ID": "4",
+      "date":"17" ,
+      "employeesTotalNumber": 42
+     },{ "ID": "5",
+      "date":"22",
+      "employeesTotalNumber": 23
+     },{ "ID": "6",
+      "date":"JUL 31" ,
+      "employeesTotalNumber": 59
+     }
+            
+  ]
