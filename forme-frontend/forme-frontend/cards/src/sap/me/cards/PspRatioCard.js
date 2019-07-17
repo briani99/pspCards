@@ -6,7 +6,7 @@ sap.ui.define([
     // shortcut for sap.me.cards.CardState
     var CardState = library.CardState;
 
-    var PspRatioCard = XMLComposite.extend("sap.me.cards.PspRatioCard ", {
+    var PspRatioCard = XMLComposite.extend("sap.me.cards.PspRatioCard", {
         metadata: {
             properties: {
                 text: { type: "string", defaultValue: "Default Text"}
@@ -22,7 +22,7 @@ sap.ui.define([
             Card.setBusy(this, false);
         }.bind(this), 1000 + Math.random() * 3000);
 
-        var oVizFrame = this.oVizFrame = this.byId("idVizFrame");
+        var oVizFrame = this.oVizFrame = this.byId("idVizFrameEmployees");
         oVizFrame.setVizProperties({
             title: {
                 visible: false
@@ -67,7 +67,7 @@ sap.ui.define([
 
     PspRatioCard.prototype.initPageSettings = function() {
             jQuery.sap.require("sap/suite/ui/commons/ChartContainer");
-            var vizframe = this.byId("idVizFrame");
+            var vizframe = this.byId("idVizFrameEmployees");
             var oChartContainerContent = new sap.suite.ui.commons.ChartContainerContent({
                 icon : "sap-icon://donut-chart",
                 title : "vizFrame Donut Chart Sample",
@@ -82,7 +82,7 @@ sap.ui.define([
             oChartContainer.setShowZoom(false);
             oChartContainer.setShowLegendButton(false);
             oChartContainer.setShowLegend(true);
-            this.byId('employeesChart').setFlexContent(oChartContainer);
+            this.byId('employeesDonutChart').setFlexContent(oChartContainer);
     };
 
     return PspRatioCard;
