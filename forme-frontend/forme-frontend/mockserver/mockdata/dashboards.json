@@ -213,6 +213,62 @@
                             "Tablet": 6,
                             "Phone": 12
                         }
+                    },{
+                        "control": "sap/me/cards/PspTimeHireCard",
+                        "group": {
+                            "key": "goal2",
+                            "title": "Optimize Recruitment Processes"
+                        },
+                        "columns": {
+                            "LargeDesktop": 3,
+                            "Desktop": 4,
+                            "Tablet": 6,
+                            "Phone": 12
+                        }
+                    },{
+                        "control": "sap/me/cards/PreferredSuccessConsumptionCard",
+                        "group": {
+                            "key": "goal2"
+                        },
+                        "columns": {
+                            "LargeDesktop": 3,
+                            "Desktop": 4,
+                            "Tablet": 6,
+                            "Phone": 12
+                        }
+                    },{
+                        "control": "sap/me/cards/CustomerPerceivedOutcomeCard",
+                        "group": {
+                            "key": "goal2"
+                        },
+                        "columns": {
+                            "LargeDesktop": 3,
+                            "Desktop": 4,
+                            "Tablet": 6,
+                            "Phone": 12
+                        }
+                    },{
+                        "control": "sap/me/cards/AdoptionPlanExecutionCard",
+                        "group": {
+                            "key": "goal2"
+                        },
+                        "columns": {
+                            "LargeDesktop": 3,
+                            "Desktop": 4,
+                            "Tablet": 6,
+                            "Phone": 12
+                        }
+                    },{
+                        "control": "sap/me/cards/UsageDataFeatureRCard",
+                        "group": {
+                            "key": "goal2"
+                        },
+                        "columns": {
+                            "LargeDesktop": 3,
+                            "Desktop": 4,
+                            "Tablet": 6,
+                            "Phone": 12
+                        }
                     }
                 ]
             }
