@@ -269,6 +269,77 @@
                             "Tablet": 6,
                             "Phone": 12
                         }
+                    },{
+                        "control": "sap/me/cards/PspRatioCard",
+                        "group": {
+                            "key": "goal1",
+                            "title": "Attract a gender-balanced applicant pool"
+                        },
+                        "columns": {
+                            "LargeDesktop": 3,
+                            "Desktop": 4,
+                            "Tablet": 6,
+                            "Phone": 12
+                        }
+                    },{
+                        "control": "sap/me/cards/PreferredSuccessConsumptionCard",
+                        "group": {
+                            "key": "goal1",
+                            "title": "Attract a gender-balanced applicant pool"
+                        },
+                        "columns": {
+                            "LargeDesktop": 3,
+                            "Desktop": 4,
+                            "Tablet": 6,
+                            "Phone": 12
+                        }
+                    },{
+                        "control": "sap/me/cards/CustomerPerceivedOutcomeCard",
+                        "group": {
+                            "key": "goal1",
+                            "title": "Attract a gender-balanced applicant pool"
+                        },
+                        "columns": {
+                            "LargeDesktop": 3,
+                            "Desktop": 4,
+                            "Tablet": 6,
+                            "Phone": 12
+                        }
+                    },{
+                        "control": "sap/me/cards/AdoptionPlanExecutionCard",
+                        "group": {
+                            "key": "goal1",
+                            "title": "Attract a gender-balanced applicant pool"
+                        },
+                        "columns": {
+                            "LargeDesktop": 3,
+                            "Desktop": 4,
+                            "Tablet": 6,
+                            "Phone": 12
+                        }
+                    },{
+                        "control": "sap/me/cards/UsageDataFeatureRCard",
+                        "group": {
+                            "key": "goal1"
+                        },
+                        "columns": {
+                            "LargeDesktop": 3,
+                            "Desktop": 4,
+                            "Tablet": 6,
+                            "Phone": 12
+                        }
+                    },
+                    {
+                        "control": "sap/me/cards/UsageDataFeatureAACard",
+                        "group": {
+                            "key": "goal1"
+                        },
+                        "columns": {
+                            "LargeDesktop": 3,
+                            "Desktop": 4,
+                            "Tablet": 6,
+                            "Phone": 12
+                        }
                     }
                 ]
             }
